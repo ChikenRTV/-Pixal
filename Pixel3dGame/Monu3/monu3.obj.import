@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqrgkuv68rhjb"
+path="res://.godot/imported/monu3.obj-d45d4d8a23ac27e9ff46c08f26fbd6df.mesh"
+
+[deps]
+
+files=["res://.godot/imported/monu3.obj-d45d4d8a23ac27e9ff46c08f26fbd6df.mesh"]
+
+source_file="res://Monu3/monu3.obj"
+dest_files=["res://.godot/imported/monu3.obj-d45d4d8a23ac27e9ff46c08f26fbd6df.mesh", "res://.godot/imported/monu3.obj-d45d4d8a23ac27e9ff46c08f26fbd6df.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

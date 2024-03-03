@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfltsmkf002ly"]
+
+[ext_resource type="ArrayMesh" uid="uid://b6gju36soovl4" path="res://Pistol/Pistol.obj" id="1_j5ywu"]
+[ext_resource type="AudioStream" uid="uid://shqlu5ep2qjf" path="res://PistolShoot.wav" id="2_deqmr"]
+[ext_resource type="PackedScene" uid="uid://cutbfveynld5j" path="res://LazerGun/LaserGun.tscn" id="3_8535o"]
+
+[sub_resource type="Animation" id="Animation_xwhet"]
+resource_name = "Shoot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pistol:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_at28w"]
+_data = {
+"Shoot": SubResource("Animation_xwhet")
+}
+
+[node name="Pistol" type="Node3D"]
+transform = Transform3D(0.817321, 0, 0, 0, 0.79769, 0, 0, 0, 0.697945, 0, 0, 0)
+
+[node name="Pistol" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("1_j5ywu")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104884, 0.504512, -0.845644)
+target_position = Vector3(0, 0, -1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_at28w")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_deqmr")
+
+[node name="LaserGun" parent="." instance=ExtResource("3_8535o")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 0.999999, 0, -4.37114e-08, -0.090536, -1.10698, 0.058939)

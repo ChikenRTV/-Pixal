@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djd6t7xblm4if"
+path="res://.godot/imported/BulletPistol.obj-13355797dd8c63606b6491c846458913.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BulletPistol.obj-13355797dd8c63606b6491c846458913.mesh"]
+
+source_file="res://Bullet/BulletPistol.obj"
+dest_files=["res://.godot/imported/BulletPistol.obj-13355797dd8c63606b6491c846458913.mesh", "res://.godot/imported/BulletPistol.obj-13355797dd8c63606b6491c846458913.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
