@@ -24,6 +24,10 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$Patrons/Label.text = str(PATRONS)
 	$EnemyIcon/Label.text = str(ENEMYCON)
+	if Global.Rig_Det == false:
+		$Head/Camera3D/Pistol.position.x = -0.317
+	elif Global.Rig_Det == true:
+		$Head/Camera3D/Pistol.position.x = 0.317
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

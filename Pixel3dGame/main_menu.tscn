@@ -95,4 +95,13 @@ stream = ExtResource("6_f2f2k")
 autoplay = true
 script = ExtResource("6_0v4n8")
 
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 852.0
+offset_top = 18.0
+offset_right = 1174.0
+offset_bottom = 85.0
+text = "Правая рука"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
